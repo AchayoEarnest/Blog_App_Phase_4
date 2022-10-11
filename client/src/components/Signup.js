@@ -17,6 +17,9 @@ function SignUp({ setUser }) {
       },
       body: JSON.stringify({
         username,
+        firstname,
+        lastname,
+        email,
         password,
         password_confirmation: passwordConfirmation,
       }),
