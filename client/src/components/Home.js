@@ -1,8 +1,13 @@
+import Articles from './Articles'
+
+
 function Home({ user }) {
     if (user) {
-      return <h1>Welcome, {user.username}!</h1>;
+      // return <h1>Welcome, { user.username }!</h1>;
+      return <Articles />;
+      
     } else {
-      return <h1>Please Login or Sign Up</h1>;
+      return <h2>Please log in to continue...</h2>;
     }
   }
   
