@@ -13,6 +13,6 @@
   "dependencies": {
     "client": "^0.0.1",
     "prefix": "^1.0.0",
-    "react-router-dom": "^6.4.2"
+    "react-router-dom": "^5.2.0"
   }
 }
