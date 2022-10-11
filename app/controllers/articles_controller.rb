@@ -1,17 +1,17 @@
 class ArticlesController < ApplicationController
     def index
         @articles = Article.all
-      end
+    end
     
-      def show
+    def show
         @article = Article.find(params[:id])
-      end
+    end
     
-      def new
+    def new
         @article = Article.new
-      end
+    end
     
-      def create
+    def create
         @article = Article.new(article_params)
     
         if @article.save
@@ -19,13 +19,13 @@ class ArticlesController < ApplicationController
         else
           render :new, status: :unprocessable_entity
         end
-      end
+    end
     
-      def edit
+    def edit
         @article = Article.find(params[:id])
-      end
+    end
     
-      def update
+    def update
         @article = Article.find(params[:id])
     
         if @article.update(article_params)
@@ -33,17 +33,17 @@ class ArticlesController < ApplicationController
         else
           render :edit, status: :unprocessable_entity
         end
-      end
+    end
     
-      def destroy
+    def destroy
         @article = Article.find(params[:id])
         @article.destroy
     
         redirect_to root_path, status: :see_other
-      end
+    end
     
-      private
-        def article_params
-          params.require(:article).permit(:title, :body, :status)
-        end
+    private
+    def article_params
+        params.require(:article).permit(:title, :body, :status)
+    end
 end
