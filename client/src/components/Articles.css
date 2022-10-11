@@ -1,0 +1,39 @@
+.article_page {
+    background-color: black;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    display: flex;
+    justify-content: space-between;    
+}
+
+
+.left_nav {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgb(39, 37, 37);    
+    border-radius: 12px;
+    margin-right: 10px;
+    height: 20rem;
+    padding :10px
+}
+
+.middle_sect {
+    width: 60%;
+    display: grid;
+    height: 100%;
+    border: solid 1px rgb(119, 117, 117);
+    border-radius: 12px;
+    padding :10px;
+}
+
+.right_sect {
+    width: 20%;
+    display: grid;
+    height: 100vh;
+    padding :10px;
+}
+
