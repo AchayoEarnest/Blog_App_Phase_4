@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(20, 20, 20);
+  background: black;
   color: white;  
 }
 
@@ -18,7 +18,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 0.1px solid grey;
 }
 
 header a,
@@ -26,7 +26,7 @@ header button {
   font-size: 1rem;
   display: inline-block;
   background-color: #fff8e7;
-  border: 1px solid salmon;
+  border: 1px solid white;
   margin: 1rem;
   padding: 0.5rem;
   text-decoration: none;
@@ -34,6 +34,10 @@ header button {
   width: 50px;
   cursor: pointer;
   border-radius: 20px;
+}
+
+.nav {
+  background-color: rgb(53, 52, 52);
 }
 
 main {
@@ -47,17 +51,34 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(20, 20, 20);
+  background: black;
 }
 
 form {
   background-color: #2b2a28;
-  border: 1px solid salmon;
+  border: 0.1px solid grey;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   width: 400px;
   margin: 0 auto;
   padding: 0 1rem 1rem;
+}
+
+.header-btn {
+  color: blue;
+}
+
+.header-btn:hover {
+  background-color: blue;
+  color: white;
+  border: none;
+}
+
+.btn-login, .btn-signup {
+  height: 30px;
+  margin-top: 10px;
+  background-color: blue;
 }
 
 form input {

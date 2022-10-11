@@ -11,17 +11,17 @@ function NavBar({ user, setUser }) {
   }
 
   return (
-    <header>
+    <header className="nav">
       <div>
-        <Link to="/">Home</Link>
+        <Link to="/" className="header-btn">Home</Link>
       </div>
       <div>
         {user ? (
           <button onClick={handleLogoutClick}>Logout</button>
         ) : (
           <>
-            <Link to="/signup">Signup</Link>
-            <Link to="/login">Login</Link>
+            <Link to="/signup" className="header-btn" >Signup</Link>
+            <Link to="/login" className="header-btn" >Login</Link>
           </>
         )}
       </div>

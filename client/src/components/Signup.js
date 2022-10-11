@@ -25,7 +25,7 @@ function SignUp({ setUser }) {
   }
 
   return (
-    <div>
+    <div className="mainSection">
       <form onSubmit={handleSubmit}>
         <h1>Sign Up</h1>
         <label htmlFor="username">Username</label>
@@ -52,7 +52,7 @@ function SignUp({ setUser }) {
           onChange={(e) => setPasswordConfirmation(e.target.value)}
           autoComplete="current-password"
         />
-        <button type="submit">Sign Up</button>
+        <button type="submit" className="btn-signup" >Sign Up</button>
       </form>
     </div>
   );

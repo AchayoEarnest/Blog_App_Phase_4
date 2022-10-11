@@ -31,6 +31,7 @@ function Login({ setUser }) {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
+        
         <label htmlFor="password">Password</label>
         <input
           type="password"
@@ -39,7 +40,7 @@ function Login({ setUser }) {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Login</button>
+        <button type="submit" className="btn-login" >Login</button>
       </form>
     </div>
   );
