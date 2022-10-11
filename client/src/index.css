@@ -75,6 +75,11 @@ form {
   border: none;
 }
 
+.header-btn-logout {
+  padding-right: 55px;
+  color: red;
+}
+
 .btn-login, .btn-signup {
   height: 30px;
   margin-top: 10px;
