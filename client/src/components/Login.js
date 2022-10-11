@@ -20,7 +20,7 @@ function Login({ setUser }) {
   }
 
   return (
-    <div>
+    <div className="mainSection">
       <form onSubmit={handleSubmit}>
         <h1>Login</h1>
         <label htmlFor="username">Username</label>
