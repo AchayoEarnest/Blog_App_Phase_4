@@ -17,11 +17,22 @@ function Articles() {
   return (
     <div className='article_page'>
       <div className='left_nav'>
+        <div className="Account_Info">
+            <img className="Account_Image"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2fd3LvBNTzUGkRTqBX2UMvbrbzNuzShL4ll3pI5YUZg&s"
+                alt="example"
+            />
+           
+            <div className="edit-btn">
+              <button type="submit" className="edit-btn" >Edit Account</button>
+            </div>
+        </div>
       </div>
       <div className='middle_sect'>
         <Article articles={ articles } />   
       </div>
       <div className='right_sect'>
+
       </div>
     </div>
   )

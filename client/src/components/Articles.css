@@ -21,6 +21,29 @@
     padding :10px
 }
 
+.edit-btn{
+    color: rgb(253, 140, 10);
+    border-radius: 5px;
+    padding: 3px;
+    margin-top: 10px;
+  }
+
+.Account_Image{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 5px;
+  } 
+
+  .Account_Info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    width: 100%;
+  }
+
 .middle_sect {
     width: 60%;
     display: grid;

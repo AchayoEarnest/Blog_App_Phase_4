@@ -3,8 +3,13 @@ import Articles from './Articles'
 
 function Home({ user }) {
     if (user) {
-      // return <h1>Welcome, { user.username }!</h1>;
-      return <Articles />;
+      
+      return (
+        <>
+          <h4>Welcome back, { user.firstname }!</h4>
+          <Articles />
+        </>
+      )
       
     } else {
       return <h2>Please log in to continue...</h2>;

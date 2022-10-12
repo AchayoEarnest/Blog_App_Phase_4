@@ -1,7 +1,13 @@
 import React from 'react'
 import NewArticle from './NewArticle';
 
-function Article({articles}) {
+function Article({ articles }) {
+    
+    const onDelete = async (id) => {
+        await fetch(`/articles/${id}`, {
+            method: 'DELETE',
+        })
+    }
     
     return (      
         <div>

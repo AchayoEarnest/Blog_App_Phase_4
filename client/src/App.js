@@ -28,6 +28,7 @@ function App() {
               <Home user={user}/>
             </Route>
           </Switch>
+          
         ) : (
           <Switch>
             <Route path="/signup">
