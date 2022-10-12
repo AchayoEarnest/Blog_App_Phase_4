@@ -5,17 +5,24 @@ function Article({articles}) {
     
     return (      
         <div>
-            <NewArticle />
+            
             <>
-                { articles.map((article) => (
-                    <div className='article_card' key={article.id}>
-                        <h3>{ article.title }</h3> 
-                        <p>{ article.body }</p>
-                        <button>Comment</button>
-                        <button>Edit</button>
-                        <button>Delete</button>
-                    </div>                     
-                )) }  
+                <div>
+                    <button type="submit" className="btn-post" >Add Article</button>
+                </div>
+                <h2>Articles</h2>
+                <div>
+                    { articles.map((article) => (
+                        <div className='article_card' key={article.id}>
+                            <h3>{ article.title }</h3> 
+                            <p>{ article.body }</p>
+                            <button>Comment</button>
+                            <button>Edit</button>
+                            <button onClick={onDelete}>Delete</button>
+                        </div>                     
+                    )) }  
+                </div>
+                
             </>            
         </div>
   )

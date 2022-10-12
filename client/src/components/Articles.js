@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Article from './Article';
 import React from 'react';
 import './Articles.css'
+import NewArticle from './NewArticle';
 
 function Articles() {
   const [articles, setArticles] = useState([]);
@@ -17,7 +18,7 @@ function Articles() {
     <div className='article_page'>
       <div className='left_nav'>
       </div>
-      <div className='middle_sect'>        
+      <div className='middle_sect'>
         <Article articles={ articles } />   
       </div>
       <div className='right_sect'>
