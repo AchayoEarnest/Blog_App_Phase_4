@@ -4,9 +4,10 @@ import SignUp from "./components/Signup";
 import Login from "./components/Login";
 import NavBar from "./components/Navbar";
 import Home from "./components/Home";
+import Articles from "./components/Articles"
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(null); 
 
   useEffect(() => {
     // auto-login
@@ -36,7 +37,7 @@ function App() {
               <Login setUser={setUser} />
             </Route>
             <Route path="/">
-              <Home />
+                <Home />
             </Route>
           </Switch>
         )}
