@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: black;
-  color: white;  
+  color: white;
 }
 
 code {
@@ -19,13 +19,16 @@ header {
   justify-content: space-between;
   align-items: center;
   border-bottom: 0.1px solid grey;
+  position: fixed;
+  width: 100%;
+  margin-top: 0px;
 }
 
 header a,
 header button {
   font-size: 1rem;
   display: inline-block;
-  background-color: #fff8e7;
+  background-color: grey;
   border: 1px solid white;
   margin: 1rem;
   padding: 0.5rem;
@@ -33,15 +36,17 @@ header button {
   color: blue;
   width: 50px;
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 10px; 
 }
 
 .nav {
   background-color: rgb(53, 52, 52);
+  height: 65px;
 }
 
 main {
-  margin: 1rem;  
+  padding-top: 4.5rem;  
+  padding-left: 0.5rem;
 }
 
 .mainSection {
@@ -66,7 +71,7 @@ form {
 }
 
 .header-btn {
-  color: blue;
+  color: rgb(254, 254, 255);
 }
 
 .header-btn:hover {

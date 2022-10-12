@@ -26,7 +26,7 @@
     display: grid;
     height: 100%;
     border: solid 1px rgb(119, 117, 117);
-    border-radius: 12px;
+    border-radius: 10px;
     padding :10px;
 }
 
@@ -35,5 +35,11 @@
     display: grid;
     height: 100vh;
     padding :10px;
+}
+
+.article_card {
+    width: 100%;
+    background-color: rgb(39, 37, 37); 
+    height: 250px;
 }
 

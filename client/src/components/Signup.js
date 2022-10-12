@@ -70,7 +70,6 @@ function SignUp({ setUser }) {
           autoComplete="current-email"
         />
 
-
         <label htmlFor="password">Password</label>
         <input
           type="password"
