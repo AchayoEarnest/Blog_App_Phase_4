@@ -26,13 +26,13 @@ function App() {
         { user ? (
           <>
             <Switch>
-              <Route path="/">
-                <Home user={user}/>
+              <Route strict path="/">
+                <Home exact user={user}/>
               </Route>                          
             </Switch>
             
             <Switch>
-              <Route path="/update">
+              <Route strict path="/update">
                 <Update />
               </Route>              
             </Switch>
@@ -42,8 +42,7 @@ function App() {
                   <Comments />
               </Route>  
             </Switch>
-          </>
-          
+          </>          
           
         ) : (
           <Switch>
@@ -53,7 +52,7 @@ function App() {
             <Route path="/login">
               <Login setUser={setUser} />
             </Route>
-            <Route path="/">
+            <Route strict path="/">
                 <Home />
             </Route>
           </Switch>

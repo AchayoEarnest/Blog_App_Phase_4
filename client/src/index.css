@@ -89,6 +89,8 @@ form {
   height: 30px;
   margin-top: 10px;
   background-color: blue;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 .btn-post {

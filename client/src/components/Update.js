@@ -1,9 +1,60 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
+import axios from 'axios'
 
 function Update() {
-  return (
-    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eleifend urna lacus, quis iaculis ex rhoncus eu. Vivamus dignissim porttitor purus a tristique. Donec bibendum massa eu orci vulputate, et tempor lacus scelerisque. Curabitur pulvinar tristique velit sed congue. Donec ornare euismod urna, quis elementum arcu ultrices et. Nulla viverra, ligula nec euismod tincidunt, tellus quam fringilla nunc, eget scelerisque ex est a elit. Nunc rhoncus lorem at ante faucibus, a blandit leo pharetra. Proin laoreet pellentesque diam. Aenean sit amet tincidunt velit, a vulputate lorem. Praesent pellentesque, nisl in aliquam vehicula, felis enim tempor magna, non porta ante massa sed sapien. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam consectetur euismod nulla, vulputate scelerisque felis condimentum eget. In sit amet libero neque. Donec a pretium diam.</div>
-  )
-}
+  const [title, setTitle] = useState("");
+  const [body, setBody] = useState("");
+  const [id, setId] = useState(null);
+
+  console.log(title);
+  console.log(body);
+
+  const sendDataToApi = (e) => {
+    // e.preventDefault()
+    console.log(id)
+    axios.put(`/articles/${id}`, {
+      title,
+      body
+    }).then(() => NavigationPreloadManager.push('./'));
+    setTitle('');
+    setBody('');    
+  }
+
+  useEffect(() => {
+    setTitle(localStorage.getItem('title'));
+    setBody(localStorage.getItem('body'));
+    setId(localStorage.getItem('id'))
+  }, []);
+
+    return (
+      <div className="postSection" style={ { "width": "71%", marginTop: "20px", marginLeft: "15%" }}>
+        <form  className="post_form">
+          <label htmlFor="title">Title</label>
+          <input
+            type="text"
+            id="title"
+            autoComplete="off"
+            value={ title }
+            name ="title"
+            onChange={ (e) => setTitle(e.target.value) }
+          />
+        
+          <label htmlFor="body">Body</label>
+          <textarea
+            type="body"
+            id="body"
+            autoComplete="off"
+            value={ body }
+            name="body"
+            onChange={ (e) => setBody(e.target.value) }
+          />
+          <Link to = '/'>
+            <button type="submit" className="btn-login" onClick={ sendDataToApi }>Update</button>
+          </Link>          
+        </form>
+      </div>
+    );
+  }
 
 export default Update

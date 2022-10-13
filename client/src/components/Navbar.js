@@ -15,6 +15,7 @@ function NavBar({ user, setUser }) {
       <div>
         <Link to="/" className="header-btn">Home</Link>
       </div>
+      <h1>Blogs App</h1>
       <div>
         {user ? (
           <button onClick={handleLogoutClick} className="header-btn-logout" >Logout</button>

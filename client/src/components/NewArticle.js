@@ -23,7 +23,7 @@ function NewArticle({article}) {
       }
     
   return (
-    <div className="postSection">
+    <div className="postSection">      
       <form onSubmit={handleSubmit} className="post_form">
         <label htmlFor="title">Title</label>
         <input
