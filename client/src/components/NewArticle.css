@@ -1,3 +1,9 @@
 .post_form {
-    width: 10%;
+    width: 80%;
 }
+
+.post_form > textarea {
+    height: 100px;
+    border-radius: 10px;
+}
+

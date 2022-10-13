@@ -1,23 +1,16 @@
 import React from 'react'
 
 
+
 function Article({ articles, onDelete }) {
-    
-    // const onDelete = async (id) => {
-    //     await fetch(`/articles/${id}`, {
-    //         method: 'DELETE',
-    //     })
-    // }
 
     
     
     return (      
         <div>
             
-            <>
-                <div>
-                    <button type="submit" className="btn-post" >Add Article</button>
-                </div>
+            <>             
+                
                 <h2>Articles</h2>
                 <div>
                     { articles.map((article) => (

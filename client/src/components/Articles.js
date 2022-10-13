@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Article from './Article';
 import React from 'react';
 import './Articles.css'
+import NewArticle from './NewArticle'
 
 
 function Articles() {
@@ -37,6 +38,7 @@ function Articles() {
         </div>
       </div>
       <div className='middle_sect'>
+        <NewArticle />
         <Article articles={ articles } onDelete={deleteArticle} />   
       </div>
       <div className='right_sect'>

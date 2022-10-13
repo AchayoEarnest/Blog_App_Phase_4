@@ -23,18 +23,27 @@ function App() {
     <>
       <NavBar user={user} setUser={setUser} />
       <main>
-        {user ? (
-          <Switch>
-            <Route path="/">
-              <Home user={user}/>
-            </Route>
-            <Route path="/Comments">
-              <Comments user={user}/>
-            </Route>
-            <Route path="/update">
-              <Update />
-            </Route>
-          </Switch>
+        { user ? (
+          <>
+            <Switch>
+              <Route path="/">
+                <Home user={user}/>
+              </Route>                          
+            </Switch>
+            
+            <Switch>
+              <Route path="/update">
+                <Update />
+              </Route>              
+            </Switch>
+
+            <Switch>
+              <Route path="/comments">
+                  <Comments />
+              </Route>  
+            </Switch>
+          </>
+          
           
         ) : (
           <Switch>

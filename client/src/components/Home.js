@@ -1,4 +1,5 @@
 import Articles from './Articles'
+import NewArticle from './NewArticle';
 
 
 function Home({ user }) {

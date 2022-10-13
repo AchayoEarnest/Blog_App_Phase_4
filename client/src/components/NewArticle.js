@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './NewArticle.css'
 
 function NewArticle({article}) {
     const [title, setTitle] = useState("")
@@ -6,7 +7,7 @@ function NewArticle({article}) {
 
     function handleSubmit(e) {
         e.preventDefault();
-        fetch("/article", {
+        fetch("/articles", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -15,6 +16,8 @@ function NewArticle({article}) {
         }).then((r) => {
           if (r.ok) {
             r.json().then((article) => console.log(article));
+            setTitle('');
+            setBody('');
           }
         });
       }
@@ -22,7 +25,6 @@ function NewArticle({article}) {
   return (
     <div className="postSection">
       <form onSubmit={handleSubmit} className="post_form">
-        <h1>Post</h1>
         <label htmlFor="title">Title</label>
         <input
           type="text"
