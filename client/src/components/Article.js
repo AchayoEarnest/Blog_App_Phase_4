@@ -1,13 +1,15 @@
 import React from 'react'
-import NewArticle from './NewArticle';
 
-function Article({ articles }) {
+
+function Article({ articles, onDelete }) {
     
-    const onDelete = async (id) => {
-        await fetch(`/articles/${id}`, {
-            method: 'DELETE',
-        })
-    }
+    // const onDelete = async (id) => {
+    //     await fetch(`/articles/${id}`, {
+    //         method: 'DELETE',
+    //     })
+    // }
+
+    
     
     return (      
         <div>
@@ -24,7 +26,7 @@ function Article({ articles }) {
                             <p>{ article.body }</p>
                             <button>Comment</button>
                             <button>Edit</button>
-                            <button onClick={onDelete}>Delete</button>
+                            <button onClick={()=> onDelete(article.id)}>Delete</button>
                         </div>                     
                     )) }  
                 </div>

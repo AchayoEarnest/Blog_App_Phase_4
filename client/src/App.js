@@ -4,7 +4,8 @@ import SignUp from "./components/Signup";
 import Login from "./components/Login";
 import NavBar from "./components/Navbar";
 import Home from "./components/Home";
-import Articles from "./components/Articles"
+import Comments from "./components/Comments"
+import Update from "./components/Update"
 
 function App() {
   const [user, setUser] = useState(null); 
@@ -26,6 +27,12 @@ function App() {
           <Switch>
             <Route path="/">
               <Home user={user}/>
+            </Route>
+            <Route path="/Comments">
+              <Comments user={user}/>
+            </Route>
+            <Route path="/update">
+              <Update />
             </Route>
           </Switch>
           
