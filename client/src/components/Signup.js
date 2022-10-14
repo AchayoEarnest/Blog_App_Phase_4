@@ -40,7 +40,8 @@ function SignUp({ setUser }) {
           id="username"
           autoComplete="off"
           value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          onChange={ (e) => setUsername(e.target.value) }
+          required
         />
         
         <label htmlFor="firstname">First name</label>
@@ -50,6 +51,7 @@ function SignUp({ setUser }) {
           value={firstname}
           onChange={(e) => setFistName(e.target.value)}
           autoComplete="current-firstname"
+          required
         />
 
         <label htmlFor="lastname">Last name</label>
@@ -59,6 +61,7 @@ function SignUp({ setUser }) {
           value={lastname}
           onChange={(e) => setLastName(e.target.value)}
           autoComplete="current-lastname"
+          required
         />
 
         <label htmlFor="email">Email</label>
@@ -68,6 +71,7 @@ function SignUp({ setUser }) {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           autoComplete="current-email"
+          required
         />
 
         <label htmlFor="password">Password</label>
@@ -77,6 +81,7 @@ function SignUp({ setUser }) {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           autoComplete="current-password"
+          required
         />
         
         <label htmlFor="password">Password Confirmation</label>
@@ -86,6 +91,7 @@ function SignUp({ setUser }) {
           value={passwordConfirmation}
           onChange={(e) => setPasswordConfirmation(e.target.value)}
           autoComplete="current-password"
+          required
         />
         <button type="submit" className="btn-signup" >Sign Up</button>
       </form>
